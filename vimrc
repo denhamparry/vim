@@ -18,12 +18,21 @@ filetype plugin indent on    " required
 
 set backspace=2         " Make backspace work for indent, eol, start
 set noerrorbells        " No beeps
-set relativenumber      " Show relative line numbers
 set history=1000	" keep 1000 lines of command line history
 set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set incsearch           " Incomplete search matches
+set hlsearch            " Keep search highlight after complete
+set relativenumber      " Show line numbers
+set showmode            " Show the current mode in the last line
+set showcmd             " Show the current command in the last line
+set showmatch           " Highlight matching brackets
+set wildmenu            " Improve tab completion menu
 set wildmenu		" display completion matches in a status line
+set encoding=utf-8      " Default to UTF-8
 set scrolloff=2		" start scrolling 2 lines from the screen edge
+syntax on               " Enable syntax highlighting
+set background=dark     " Tell vim we're using a dark colourscheme
+colorscheme badwolf     " Make it prettya
 
 if has('mouse')
   if &term =~ 'xterm'
@@ -32,14 +41,6 @@ if has('mouse')
     set mouse=nvi
   endif
 endif
-"   ____      _                    ____       _                         
-"  / ___|___ | | ___  _   _ _ __  / ___|  ___| |__   ___ _ __ ___   ___ 
-" | |   / _ \| |/ _ \| | | | '__| \___ \ / __| '_ \ / _ \ '_ ` _ \ / _ \
-" | |__| (_) | | (_) | |_| | |     ___) | (__| | | |  __/ | | | | |  __/
-"  \____\___/|_|\___/ \__,_|_|    |____/ \___|_| |_|\___|_| |_| |_|\___|
-
-set background=dark       " Tell vim we're using a dark colourscheme
-colorscheme badwolf       " Make it prettya
 
 "  __  __            _       _                     
 " |  \/  | __ _ _ __| | ____| | _____      ___ __  
@@ -54,3 +55,6 @@ colorscheme badwolf       " Make it prettya
 " |_|   |_|  \___| \_/ |_|\___| \_/\_/  
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
+
+set exrc
+set secure
