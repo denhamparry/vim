@@ -34,4 +34,7 @@ You can use the [`Makefile`](Makefile) to run a series of commands.
 ```console
 $ make help
 install                        Sets up symlink for user and root .vimrc for vim and neovim.
+			       Install Vundle
+update-vundle		       Clean and install plugins
+
 ```

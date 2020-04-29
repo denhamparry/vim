@@ -11,28 +11,12 @@ install: ## Sets up symlink for user and root .vimrc for vim and neovim.
 	sudo mkdir -p /root/.config
 	sudo ln -snf "$(HOME)/.vim" /root/.config/nvim
 	sudo ln -snf "$(HOME)/.vimrc" /root/.config/nvim/init.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vi
 
-.PHONY: update
-update: update-pathogen update-plugins ## Updates pathogen and all plugins.
-
-.PHONY: update-plugins
-update-plugins: ## Updates all plugins.
-	git submodule update --init --recursive
-	git submodule update --remote
-	git submodule foreach 'git pull --recurse-submodules origin `git rev-parse --abbrev-ref HEAD`'
-
-.PHONY: update-pathogen
-update-pathogen: ## Updates pathogen.
-	curl -LSso $(CURDIR)/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-
-.PHONY: remove-submodule
-remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
-	@:$(call check_defined, MODULE, path of module to remove)
-	mv $(MODULE) $(MODULE).tmp
-	git submodule deinit -f -- $(MODULE)
-	$(RM) -r .git/modules/$(MODULE)
-	git rm -f $(MODULE)
-	$(RM) -r $(MODULE).tmp
+.PHONY: install-vundle
+update-vundle: ## Updates vundle.
+	vim +PluginClean +qall
+	vim +PluginInstall +qall
 
 .PHONY: help
 help:
