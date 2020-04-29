@@ -8,7 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'lifepillar/vim-solarized8'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -159,20 +158,3 @@ endif
 "
 set noerrorbells                " No beeps
 set relativenumber              " Show relative line numbers
-"
-" Colour scheme
-"
-" References
-" https://github.com/rafi/awesome-vim-colorschemes
-set background=dark
-let g:solarized_visibility="normal"
-let g:solarized_diffmode="normal"
-let g:solarized_termtran=1
-let g:solarized_statusline="normal"
-let g:solarized_italics=1
-let g:solarized_old_cursor_style=0
-let g:solarized_use16=1
-let g:solarized_extra_hi_groups=1
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme solarized8
