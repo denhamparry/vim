@@ -9,10 +9,7 @@ My vim dot files. the `.vimrc` file is saved to [vimrc](https://github.com/denha
 
 - [About](#about)
   * [Installing](#installing)
-  * [Pathogen](#pathogen)
-- [Contributing](#contributing)
-  * [Using the `Makefile`](#using-the-makefile)
-- [Plugins Used](#plugins-used)
+- [Makefile](#makefile)
 
 <!-- tocstop -->
 
