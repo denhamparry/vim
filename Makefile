@@ -11,7 +11,7 @@ install: ## Sets up symlink for user and root .vimrc for vim and neovim.
 	sudo mkdir -p /root/.config
 	sudo ln -snf "$(HOME)/.vim" /root/.config/nvim
 	sudo ln -snf "$(HOME)/.vimrc" /root/.config/nvim/init.vim
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vi
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 .PHONY: install-vundle
 update-vundle: ## Updates vundle.
