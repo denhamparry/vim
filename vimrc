@@ -141,7 +141,8 @@ set relativenumber              " Show relative line numbers
 " https://github.com/rafi/awesome-vim-colorschemes
 " https://github.com/lifepillar/vim-solarized8
 "
+set rtp+=~/.vim/bundle/solarized8
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme solarized8

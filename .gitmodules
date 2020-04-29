@@ -1,0 +1,3 @@
+[submodule "bundle/solarized8"]
+	path = bundle/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
