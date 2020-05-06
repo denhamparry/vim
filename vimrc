@@ -15,9 +15,22 @@ Plugin 'morhetz/gruvbox'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
 
-
 call vundle#end()            " required
 filetype plugin indent on    " required
+"   ____      _                     _                         
+"  / ___|___ | | ___  _ __ ___  ___| |__   ___ _ __ ___   ___ 
+" | |   / _ \| |/ _ \| '__/ __|/ __| '_ \ / _ \ '_ ` _ \ / _ \
+" | |__| (_) | | (_) | |  \__ \ (__| | | |  __/ | | | | |  __/
+"  \____\___/|_|\___/|_|  |___/\___|_| |_|\___|_| |_| |_|\___|
+"                   
+set t_ut=
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"   " Fix colors for tmux
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"   " https://github.com/tmux/tmux/issues/1246
+set termguicolors                        " Turn on 24bit colors
+set background=dark                      " Dark colorscheme please
+let g:gruvbox_italic=1                   " Italics are fine, just fine
+let g:gruvbox_termcolors=16
+colorscheme gruvbox
 
 if has('mouse')
   if &term =~ 'xterm'
@@ -42,20 +55,6 @@ set wildmenu		" display completion matches in a status line
 set encoding=utf-8      " Default to UTF-8
 set scrolloff=2		" start scrolling 2 lines from the screen edge
 syntax on               " Enable syntax highlighting
-"   ____      _                     _                         
-"  / ___|___ | | ___  _ __ ___  ___| |__   ___ _ __ ___   ___ 
-" | |   / _ \| |/ _ \| '__/ __|/ __| '_ \ / _ \ '_ ` _ \ / _ \
-" | |__| (_) | | (_) | |  \__ \ (__| | | |  __/ | | | | |  __/
-"  \____\___/|_|\___/|_|  |___/\___|_| |_|\___|_| |_| |_|\___|
-"                   
-set t_ut=
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"   " Fix colors for tmux
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"   " https://github.com/tmux/tmux/issues/1246
-set termguicolors                        " Turn on 24bit colors
-set background=dark                      " Dark colorscheme please
-let g:gruvbox_italic=1                   " Italics are fine, just fine
-let g:gruvbox_termcolors=16
-colorscheme gruvbox
 "  __  __            _       _                     
 " |  \/  | __ _ _ __| | ____| | _____      ___ __  
 " | |\/| |/ _` | '__| |/ / _` |/ _ \ \ /\ / / '_ \ 
