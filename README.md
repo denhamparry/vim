@@ -130,6 +130,12 @@ update-vundle		       Clean and install plugins
 | `d]m`             | Delete to start of next method         |
 | `%`               | Jump to match of next paren or bracket |
 
+## Vundle
+
+- [Vimux](https://github.com/benmills/vimux)
+- [NERDTree](https://github.com/preservim/nerdtree)
+- [NERDTree git](https://github.com/Xuyuanp/nerdtree-git-plugin)
+
 ## References
 
 - [Talk on going mouseless with Vim, Tmux, and Hotkeys](https://youtu.be/E-ZbrtoSuzw)
