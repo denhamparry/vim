@@ -9,6 +9,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'benmills/vimux'
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'morhetz/gruvbox'
@@ -71,3 +74,41 @@ let g:mkdp_auto_close = 1
 
 set exrc
 set secure
+" __     ___                      
+" \ \   / (_)_ __ ___  _   ___  __
+"  \ \ / /| | '_ ` _ \| | | \ \/ /
+"   \ V / | | | | | | | |_| |>  < 
+"    \_/  |_|_| |_| |_|\__,_/_/\_\
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vc :VimuxCloseRunner<CR>
+map <Leader>vz :VimuxZoomRunner<CR>
+"  _   _ _____ ____  ____ _____              
+" | \ | | ____|  _ \|  _ \_   _| __ ___  ___ 
+" |  \| |  _| | |_) | | | || || '__/ _ \/ _ \
+" | |\  | |___|  _ <| |_| || || | |  __/  __/
+" |_| \_|_____|_| \_\____/ |_||_|  \___|\___|
+let NERDTreeIgnore = ['\~$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeShowHidden = 1
+autocmd vimenter * NERDTree
+"  _   _ _____ ____  ____ _____                      _ _   
+" | \ | | ____|  _ \|  _ \_   _| __ ___  ___    __ _(_) |_ 
+" |  \| |  _| | |_) | | | || || '__/ _ \/ _ \  / _` | | __|
+" | |\  | |___|  _ <| |_| || || | |  __/  __/ | (_| | | |_ 
+" |_| \_|_____|_| \_\____/ |_||_|  \___|\___|  \__, |_|\__|
+"                                              |___/       
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
