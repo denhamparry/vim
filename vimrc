@@ -95,6 +95,8 @@ let NERDTreeIgnore = ['\~$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*
+let NERDTreeRespectWildIgnore=1
 "  _   _ _____ ____  ____ _____                      _ _   
 " | \ | | ____|  _ \|  _ \_   _| __ ___  ___    __ _(_) |_ 
 " |  \| |  _| | |_) | | | || || '__/ _ \/ _ \  / _` | | __|
