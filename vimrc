@@ -51,6 +51,7 @@ set history=1000	" keep 1000 lines of command line history
 set ruler		" show the cursor position all the time
 set incsearch           " Incomplete search matches
 set hlsearch            " Keep search highlight after complete
+set number		" Show current line number
 set relativenumber      " Show line numbers
 set showmode            " Show the current mode in the last line
 set showcmd             " Show the current command in the last line
